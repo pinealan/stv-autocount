@@ -23,7 +23,7 @@ class election:
         
     # main function that finds the election results
     def run(self):
-        round_ = 1  # trailing underscore to avoid clasing with default maths round() function
+        round_ = 1  # trailing underscore to avoid clashing with default maths round() function
         nelect = 0  # number of elected candidates
         nelimi = 0  # number of eliminated candidates
         quota = (self.nvotes / (self.nseats + 1)) + 1  # Droop quota
@@ -43,7 +43,7 @@ class election:
         while nelect < self.nseats:
 
 
-            # checks if there enough remaining candidates to fill remaining seats, all passes if just enough
+            # checks if there are enough remaining candidates to fill remaining seats, all passes if just enough
             if self.nseats >= self.ncandi - nelimi:
                 for i in self.candidates:
                     if i.status == 'P':
